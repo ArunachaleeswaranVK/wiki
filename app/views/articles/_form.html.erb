@@ -1,0 +1,6 @@
+<%= simple_form_for @article , :html => { :class => 'form-horizontal' } , html: {multipart: true } do |f| %>
+    <%= f.collection_select :category_id , Category.all, :id, :name, {promt: "Choose a Category" } %>
+    <%= f.input :title, input_html: { class: "form-control" } %>
+    <%= f.input :content, input_html: { class: "form-control" } %>
+    <%= f.button :submit, class: "btn btn-default" %>
+<% end %>    
